@@ -1,5 +1,5 @@
 # How many users? (Go Challenge)
-![](Untitled Diagram.drawio.png)
+![](https://raw.githubusercontent.com/ArmanCreativeSolutions/go-challenge/main/Untitled Diagram.drawio.png?raw=true)
 
 Suppose there is a "User Segmentation Service" (USS) that segments users based on their activities.
 For example, if a user visits sports news, USS classifies and tags "sport" to him.
