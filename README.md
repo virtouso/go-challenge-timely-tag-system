@@ -1,4 +1,5 @@
 # How many users? (Go Challenge)
+![](Untitled Diagram.drawio.png)
 
 Suppose there is a "User Segmentation Service" (USS) that segments users based on their activities.
 For example, if a user visits sports news, USS classifies and tags "sport" to him.
