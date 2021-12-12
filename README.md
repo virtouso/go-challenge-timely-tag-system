@@ -1,5 +1,4 @@
 # How many users? (Go Challenge)
-![](https://raw.githubusercontent.com/ArmanCreativeSolutions/go-challenge/main/Untitled Diagram.drawio.png?raw=true)
 
 Suppose there is a "User Segmentation Service" (USS) that segments users based on their activities.
 For example, if a user visits sports news, USS classifies and tags "sport" to him.
@@ -10,7 +9,9 @@ ES receives the pair from USS as input and stores it.
 The responsibility of ES is to answer a simple query: "How many users exist on a specific segment?".
 For example, "how many users are in the sports segment?".
 
-The question is simple, but two assumptions may make it a little challenging:
+![](https://raw.githubusercontent.com/ArmanCreativeSolutions/go-challenge/main/Untitled%20Diagram.drawio.png?raw=true)
+
+The query is simple, but two assumptions may make it a little challenging:
 - A specific user remains just two weeks on a segment. After that,
 we should not count "u104010" on the sports segment.
 - There are millions of users and hundreds of segments. So your solution(s) must be scalable
@@ -29,7 +30,7 @@ Also, don't forget to document your code and clear the reasons for all your deci
 
 If your solution is not sample enough for implementing fast, you can just describe it in your documents.
 
-Explain the resoan of choices in your documents.
+Use any tools that you prefer just explain the resoan of choices in your documents.
 For example explain why you choose REST API for receiving data.
 
 It is more valuable to us that the project comes with unit tests.
