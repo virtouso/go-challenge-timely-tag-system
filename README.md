@@ -28,9 +28,9 @@ interface to receive data (user_id, segment pair) from USS.
 Try to write your code as reusable and readable as possible.
 Also, don't forget to document your code and clear the reasons for all your decisions in the code.
 
-If your solution is not sample enough for implementing fast, you can just describe it in your documents.
+If your solution is not simple enough for implementing fast, you can just describe it in your documents.
 
-Use any tools that you prefer just explain the resoan of choices in your documents.
+Use any tools that you prefer just explain the reason of choices in your documents.
 For example explain why you choose REST API for receiving data.
 
 It is more valuable to us that the project comes with unit tests.
