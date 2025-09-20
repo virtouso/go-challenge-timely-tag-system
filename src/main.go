@@ -7,11 +7,10 @@ import (
 	"go-challenge-timely-tag-system/repository"
 	"log"
 	"os"
-	"time"
 )
 
 func main() {
-	time.Sleep(30 * time.Second)
+	//	time.Sleep(30 * time.Second)
 	repository.Redis = repository.NewRedisRepository(os.Getenv(envKeys.RedisAddress), "", 0)
 	go jobs.Init()
 	app.StartApplication()
