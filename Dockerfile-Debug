@@ -1,0 +1,32 @@
+# Use the same Go base image. This is a large image containing all the Go tools.
+FROM golang:1.24
+
+
+ENV REPO_URL=github.com/virtouso/go-challenge-timely-tag-system
+ENV port=8090
+ENV GOPATH=/app
+ENV APP_PATH=$GOPATH/src/github.com/go-challenge-timely-tag-system
+ENV WORKPATH=$APP_PATH/src
+
+
+ENV PATH=$GOPATH/bin:$PATH
+
+
+RUN go install github.com/go-delve/delve/cmd/dlv@latest
+
+
+COPY src $WORKPATH
+
+# Set the working directory.
+WORKDIR $WORKPATH
+
+
+RUN go mod tidy
+
+
+EXPOSE 8090
+
+EXPOSE 40000
+
+
+CMD ["dlv", "debug", "--listen=:40000", "--headless", "--api-version=2", "--continue", "--accept-multiclient"]

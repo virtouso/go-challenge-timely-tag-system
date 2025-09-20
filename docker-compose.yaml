@@ -1,0 +1,31 @@
+﻿version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test-api
+    ports:
+      - "8090:8090"   # Map host:container (API listens on 8080 inside container)
+    depends_on:
+      - redis
+    environment:
+      - redis_address=redis:6379
+      - remove_old_records_interval=* * * * *      # example value in minutes
+      - keep_alive_minutes=4                 # example value in minutes appsettings.json or Program.cs reads this
+    networks:
+      - mynet
+
+  redis:
+    image: redis/redis-stack:latest  # includes RedisTimeSeries, RedisJSON, etc.
+    container_name: redis
+    ports:
+      - "6379:6379"
+      - "8001:8001"   # RedisInsight UI
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
